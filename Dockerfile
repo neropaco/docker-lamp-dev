@@ -32,6 +32,9 @@ ADD xdebug.ini /etc/php5/mods-available/xdebug.ini
 ADD php-fpm.service /etc/service/php-fpm/run
 ADD nginx.service /etc/service/nginx/run
 
+RUN chmod +x /etc/service/nginx/run && \
+    chmod +x /etc/service/php-fpm/run
+
 # add socket directory for php-fpm
 RUN mkdir -p /run/fpm
 
