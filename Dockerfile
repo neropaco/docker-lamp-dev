@@ -18,6 +18,7 @@ RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y php5 php5-cli php5-mysql
     apt-get update && \
     apt-get install -y nginx
 
+RUN locale-gen it_IT.UTF-8
 
 # package install is finished, clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
