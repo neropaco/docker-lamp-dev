@@ -11,7 +11,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
 
 
 # we use the enviroment variable to stop debconf from asking questions..
-RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y php5-xdebug
+#RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y php5-xdebug
 
 # package install is finished, clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
