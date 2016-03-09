@@ -18,7 +18,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # install custom config files
 ADD xdebug.ini /etc/php5/mods-available/xdebug.ini
-#ADD nginx.conf /etc/nginx/nginx.conf
+ADD nginx.conf /etc/nginx/nginx.conf
 
 # clean up tmp files (we don't need them for the image)
 RUN rm -rf /tmp/* /var/tmp/*
